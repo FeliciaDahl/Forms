@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<div class="header">
+    
+       
+    <div class="card">
+        <h1 class="headline">Forms</h1>
+        <ul class="nav-list">
+            <nav class="nav">
+           <li><a class="home" href="#" >Home</a></li> 
+<br>
+            <li><a class="shop" href="#">Shop</a></li> 
+<br>
+            <li><a class="about" href="#">About us</a></li> 
+       <br>
+           <li><a class="membership" href="#">Membership</a></li>
+       
+        </nav>
+        </ul>
+        <div class="img-container">
+        <img src="images/image2.jpg" alt="design">
+        <p class="head-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestias earum inventore maiores possimus in voluptas, illo sed fuga mollitia aperiam eum odit facilis quibusdam culpa impedit. Quo accusantium quidem repellat iusto, unde rem ab dignissimos sit a dolor, officiis omnis molestias perspiciatis illo enim deserunt similique ipsum optio doloribus.</p>
+
+    </div>
+    </div>
+
+
+</div>
+<body>
+
+    <div class="wrapper">
+
+      
+     
+       
+       
+        <!-- Detta pga ej Js. Ska skrivas <form action " " method "get"> alt post>-->
+        <form>
+            <h2>Lätt att styla!</h2>
+
+            <!-- Dessa måste vara ihopkopplade detta gör vi via "for och ID" -->
+             <!-- för att dubbelkolla detta tryck på label och se om rutan "aktiveras" -->
+              <!-- Invalid funktionen fungar endast med Js. -->
+
+
+            <div class="form invalid">
+             <label class="form-label" for="fname">First name</label>
+            <input class="form-input" type="text" name="firstname" id="fname" required placeholder="Name">
+            <p class="invalid-feedback"> You need to enter your name</p>
+        </div>
+        <div class="form ">  
+            <label class="form-label" for="email">Email</label>
+           <input class="form-input" type="email" name="email" id="email" required>
+       </div>
+       <div class="form ">
+        <label class="form-label" for="password">Password</label>
+       <input class="form-input" type="password" name="password" id="password"  required minlength="8" placeholder="Minimum 8 characters">
+   </div>
+   <div class="form">
+    <label class="form-label" for="message">Message</label>
+   <textarea class="form-input" name="message" id="message"> </textarea>
+   </div>
+
+   <h2 class="mb-1"> Svårare att styla..</h2>
+
+
+   <div class=" radio mb-1">
+
+<div class="radio-age">
+    <div class=" headline-age mb-1">Please choose your age:</div>
+
+    <div class="flex-center mb-1">
+        <input type="radio" name="age" id="youngadult" value="18-30">
+        <label for="youngadult">18-30</label>
+    </div>
+    <div class="flex-center mb-1">
+        <input type="radio" name="age" id="adult" value="30-50">
+        <label for="adult" >30-50</label>
+    </div>
+    <div class="flex-center mb-1">
+        <input type="radio" name="age" id="senior"  value="50->">
+        <label for="senior">50 -></label>
+    </div>
+</div>
+
+<div class="radio-gender">
+    <div class=" headline-age mb-1">Please choose your gender:</div>
+    <div class="flex-center mb-1">
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label>
+    </div>
+    <div class="flex-center mb-1">
+        <input type="radio" name="gender" id="woman" value="woman">
+        <label for="woman">Woman</label>
+    </div>
+    <div class="flex-center mb-1">
+        <input type="radio" name="gender" id="other" value="other">
+        <label for="other">Other</label>
+    </div>
+</div>
+
+</div>
+
+<div class="bars">
+<div class="mb-1">
+    <label for="color" class="form-label">Choose your favorite color:</label>
+    <input class="form-color" type="color" name="color" id="color">
+</div>
+<div class="mb-1">
+    <label for="date" class="form-label">Choose registration date:</label>
+    <input class="form-date" type="date" name="date" id="date">
+</div>
+</div>
+
+<div class="mb-1">
+    <label class="form-label" for="role">Select your role:</label>
+    <select class="form-input" name="role" id="role">
+        <option value=" " disabled selected></option>
+        <option value="Member">Member</option>
+        <option value="Guest">Guest</option>
+        <option value="Admin">Admin</option>
+    </select>
+</div>
+
+<div class="mb-1">
+    <label class="form-label" for="file">Upload your profile picture:</label>
+    <input type="file" name="file" id="file">
+</div>
+
+    <div class="flex-center">
+        <input type="checkbox" name="newsletter" id="newsletter">
+        <label for="newsletter">Subscribe for our newsletter</label>
+    </div>
+ 
+
+
+
+<!-- Om din button ligger i form så blir denna kopplad till ditt form. -->
+        <button class="btn">Submit</button>
+        </form>
+
+    </div>
+    
+</body>
+</html>

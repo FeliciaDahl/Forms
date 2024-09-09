@@ -1,0 +1,234 @@
+:root{
+
+    --clr-primary: hsl(120, 20%, 1%);
+    --clr-secondary:  rgb(176, 172, 172);
+
+    --br:.5rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: hsl(0, 0%, 80%);
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.card{
+
+    .headline {
+        position:absolute;
+        text-align:left;
+        font-size: 3rem;
+        color: hsl(0, 9%, 87%);
+        z-index: 1000;
+    }
+    .img-container {
+        /* Hur stor del av kortet ska bilden täcka. Detta blir minus padding i card */
+        width: 100%;
+        /* formen på bilden */
+        aspect-ratio: auto;
+        border-radius: var(--br);
+      
+    }
+
+/* width och height, anpassar bilden till fönster */
+
+
+    img {
+        margin: 0;
+       width: 100%;
+       height: 100%;
+       opacity: .8;
+       object-fit: cover;   
+    }
+
+    .nav-list {
+       
+    display: block;
+    gap: 2em;
+    position: absolute;
+    margin-top: 4rem;
+       
+     
+     
+      
+      list-style-type: none;
+     
+       z-index: 999;
+
+       color: hsl(0, 9%, 87%);
+        }
+        .home   {
+            text-decoration: none;
+          color: hsl(0, 9%, 87%);
+        }
+        .shop   {
+            text-decoration: none;
+          color: hsl(0, 9%, 87%);
+        }
+        .about   {
+            text-decoration: none;
+          color: hsl(0, 9%, 87%);
+        }
+        .membership   {
+            text-decoration: none;
+          color: hsl(0, 9%, 87%);
+        }
+}
+
+.head-text {
+  
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: hsla(120, 20%, 1%, 0.267);
+    border-radius: var(--br);
+}
+
+
+.wrapper{
+    padding-inline: 1rem;
+    width:100%;
+    margin: 0 auto;
+
+}
+
+
+
+
+.form-label {
+    display: block;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+}
+
+.form-input {
+    width:100%;
+    font-size: 1rem;
+    padding: .5em;
+    border: 1px solid var(--clr-secondary);
+    border-radius: var(--br);
+
+    &:focus {
+        outline: none;
+        box-shadow:0 0 5px rgba(59, 59, 59, 0.521);
+    }
+}
+
+textarea.form-input {
+    height: 100px;
+    resize: vertical;
+}
+
+/* OBS endast med Js!! Bara för att visa */
+.invalid-feedback {
+    color: red;
+    display: none;
+    font-size: .8rem;
+}
+.invalid {
+
+    .form-input {
+        border: 1px solid red;
+    }
+    .invalid-feedback {
+        display: block;
+    }
+}
+.btn{
+    width:100px;
+    height: 30px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: var(--br);    
+    border: 1px solid var(--clr-secondary);
+
+    &:hover {
+        outline: none;
+        box-shadow:0 0 5px rgba(59, 59, 59, 0.521);
+    }
+}
+/* Dessa kan man inte ändra färg eller bakgrund på utan bara storlek 
+och färg på boxen. centrera text med hjälp av flexbox klassen ovan */
+input[type="checkbox"] {
+    height: 20px;
+    width:20px;
+    accent-color: var(--clr-primary);
+}
+input[type="radio"]{
+    height: 20px;
+    width:20px;
+
+    accent-color: var(--clr-primary);
+}
+
+.radio {
+    display: grid;
+    gap: 1rem;
+    
+
+}
+.radio-age {
+    width: 100%;
+    padding: .5rem;
+   
+}
+
+.radio-gender {
+    width: 100%;
+    padding: .5rem;
+
+}
+
+.form-color {
+    width: 50%;
+    height: 50px;
+    border-radius: .5rem;
+    border: 1px solid var(--clr-secondary);
+
+}
+
+.form-date {
+padding:1rem;
+width: 50%;
+border-radius: .5rem;
+border: 1px solid var(--clr-secondary);
+}
+
+
+
+@media (width > 768px) {
+    .wrapper 
+    {
+        max-width: 720px;
+    }
+   .radio {
+    grid-template-columns: 1fr 1fr;
+   }
+.bars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-container{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .head-text {
+        text-align: center;
+    }
+}
+}
