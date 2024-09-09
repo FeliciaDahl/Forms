@@ -33,10 +33,11 @@ body {
         position:absolute;
         text-align:left;
         font-size: 3rem;
+        padding-bottom: 3rem;
         color: hsl(0, 9%, 87%);
         z-index: 1000;
     }
-    .img-container {
+  .img-container {
         /* Hur stor del av kortet ska bilden täcka. Detta blir minus padding i card */
         width: 100%;
         /* formen på bilden */
@@ -62,15 +63,8 @@ body {
     gap: 2em;
     position: absolute;
     margin-top: 4rem;
-       
-     
-     
-      
-      list-style-type: none;
-     
-       z-index: 999;
+    z-index: 999;
 
-       color: hsl(0, 9%, 87%);
         }
         .home   {
             text-decoration: none;
